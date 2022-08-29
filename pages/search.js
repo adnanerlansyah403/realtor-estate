@@ -32,12 +32,8 @@ const Search = ({ properties }) => {
     const { query } = router;
 
     for (let index = 0; index < Object.keys(query).length; index++) {
-      if (query[Object.keys(query)[index]]) {
-        delete query[Object.keys(query)[index]];
-
-        // if (select) {
-        //   select.value = '';
-        // }
+      if (query[Object.keys(query).find(key => key === item)]) {
+        delete query[Object.keys(query).find(key => key === item)];
       }
     }
     
