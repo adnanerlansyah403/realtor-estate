@@ -1,4 +1,5 @@
 import React from 'react'
+import parse from "html-react-parser"
 import { Box, Flex, Spacer, Text, Avatar } from "@chakra-ui/react"
 import { FaBed, FaBath } from "react-icons/fa"
 import { BsGridFill } from "react-icons/bs"
@@ -53,7 +54,7 @@ const PropertyDetails = ({
                     {title}
                 </Text>
                 <Text lineHeight="2" color="gray.600">
-                    {description}
+                    {parse(description)}
                 </Text>
             </Box>
             <Flex flexWrap="wrap" textTransform="uppercase" justifyContent="space-between">
